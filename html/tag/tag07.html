@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 암묵적인 방법 -->
+    <label>패티추가<input type="checkbox"></label>
+    <label>치즈추가<input type="checkbox"></label>
+    <label>피클추가<input type="checkbox" checked></label>
+
+    <br><br>
+
+    <!--명시적인 방법-->
+    <label for="addShot">샷추가</label><input type="checkbox" id="addShot">
+    <label for="addIce">얼음추가</label><input type="checkbox" id="addIce">
+    <label for="less25">물 25ml 적게</label><input type="checkbox" id="less25">
+
+    <br><br>
+
+    <fieldset>
+
+        <legend>족발 사이즈</legend>
+        <label>족발 소<input type="radio" name="size"></label>
+        <label>족발 중<input type="radio" name="size"></label>
+        <label>족발 대<input type="radio" name="size" checked></label>
+
+    </fieldset>
+
+    <br>
+
+    <textarea readonly>다중 텍스트 입력 공간</textarea>
+
+    <br>
+
+    <select multiple size="6">
+        <optgroup label = "햄버거">
+            <option>싸이버거</option>
+            <option>휠렛버거</option>
+            <option>치즈버거</option>
+        </optgroup>
+        <optgroup label = "면류">
+            <option selected>라면</option>
+            <option>냉면</option>
+            <option>쫄면</option>
+        </optgroup>
+    </select>
+
+    <br><br>
+    <input type="button" value="인풋버튼">
+    <input type="submit" value="인풋submit버튼">
+    <input type="reset" value="인풋reset버튼">
+    <button type="button">태그버튼</button>
+
+    <button type="submit">태그submit버튼</button>
+
+    <br>
+    <input type="text" value="하이">
+    <h3>form</h3>
+    <form>
+        <input type="text" maxlength="5" placeholder="아이디를 입력하세요">
+        <input type="reset" disabled>
+        <!-- 주석 단축키 : Ctrl + K +C -->
+        <!-- <input type = "submit" -->
+        <button type="button">버튼</button>
+        <button type="submit">submit버튼</button>
+    </form>
+
+    <br>
+    <button>
+        <img src="dishes.jpg">
+        접시 버튼
+    </button>
+
+
+
+
+
+</body>
+</html>
