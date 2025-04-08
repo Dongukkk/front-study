@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .back-gray {
+            background-color: lightgray;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        /* case 1 각자 relative 형태로 위치 이동 */
+
+        /* case 2 fixed 사용
+            container박스 : relative -> margin
+        */
+
+        /* case 3 
+            박스들이 container 내부에 위치한 구조
+        */
+
+        /* case 4 ✔
+            absolute 활용
+        */
+        
+
+        .container {
+            width: 500px;
+            height: 300px;
+            border: 5px solid black;
+            margin: 50px;
+            position: relative;
+        }
+
+
+        .red {
+            background-color: red;
+            position: static;
+        }
+
+        .green {
+            background-color: green;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        .yellow {
+            background-color: yellow;
+            position: static;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="back-gray">배경색이 light gray <br> h3글자</h3>
+
+    <div class="container">
+        <div class="box red">A</div>
+        <div class="box green">B</div>
+        <div class="box yellow">C</div>
+    </div>
+
+</body>
+
+</html>
