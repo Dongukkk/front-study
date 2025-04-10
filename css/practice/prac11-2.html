@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 700px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid black;
+            
+
+        }
+
+        #nav {
+            background-color: white;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            
+        }
+        .box1 {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        #main {
+            height: 300px;
+            display: flex;
+            
+        }
+        .bigbox {
+            background-color: orange;
+            width: 490px;
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+
+            /* align-items: center; */
+            align-content: center;
+            justify-content: space-evenly;
+
+            
+        }
+        /* .bigbox {
+            align-items: center;
+            justify-content: center;
+
+            display: grid;
+            grid-template-columns: 160px 160px 160px;
+            grid-template-rows: 100px 100px;
+        } */
+        .box {
+            width: 100px;
+            height: 50px;
+            margin: 30px;
+            background-color: black;
+
+            transition-duration: 0.5s;
+            transition-property: all;
+        }
+        #aside {
+            background-color: green;
+            display: flex;
+            width: 210px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        #footer {
+            height: 100px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .box:hover {
+            /* width:150px;
+            height: 75px; */
+            transform: scale(1.5);
+        }
+        /* 중복 속성 하나의 클래스로 정리 */
+        /* 
+        .align-center-font-white {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="nav">
+            <div class="box1">메인메뉴</div>
+            <div class="box2">마이페이지</div>
+        </div>
+        <div id="main">
+            <div class="bigbox">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div id="aside">aside</div>
+
+        </div>
+        
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>
