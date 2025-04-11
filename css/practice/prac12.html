@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+        }
+
+        .container {
+            width: 800px;
+            height: 500px;
+            margin: 50px auto;
+        }
+
+        .line {
+            width: 800px;
+            height: 100px;
+            display: flex;
+        }
+        .line2 {
+            width: 800px;
+            height: 200px;
+            display: flex;
+        }
+        .box1 {
+            height: 100px;
+            width: 400px;
+        }
+        .box2 {
+            height:100px;
+            width: 800px;
+        }
+        .box3 {
+            height:200px;
+            width:320px;
+        }
+        .box4 {
+            height:100px;
+            width:480px;
+        }
+        .box5 {
+            height: 100px;
+            width: 200px;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .gray {
+            background-color: gray;
+        }
+        .purple {
+            background-color: purple;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: lightblue;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 파랑 가로 320 -->
+    <div class="container border">
+        <div class="line">
+            <div class="yellow border box1"></div>
+            <div class="gray border box1"></div>
+        </div>
+        <div class="line">
+            <div class="purple border box2"></div>
+        </div>
+        <div class="line2">
+            <div class="blue box3 border"></div>
+            <div>
+                <div class="yellow box4 border"></div>
+                <div class="orange box4 border"></div>
+            </div>
+        </div>
+        <div class="line">
+            <div class="yellow box5 border"></div>
+            <div class="orange box5 border"></div>
+            <div class="yellow box5 border"></div>
+            <div class="green box5 border"></div>
+        </div>
+
+    </div>
+</body>
+</html>
