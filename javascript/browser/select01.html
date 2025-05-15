@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <style>
+            .bg-red {
+                background-color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <p>글자</p>
+        </div>
+
+        <div class="container">
+            <div class="box a" id="box-a-id">A</div>
+            <div class="box b">B</div>
+            <div class="box c">C</div>
+        </div>
+
+        <!-- <div id="box-a-id"></div> -->
+
+        <p id="target">text<span style="display: none;">hidden</span></p>
+
+        <script>
+            const boxA = document.getElementById('box-a-id');
+                        //id값과 일치하는 요소를 선택
+            console.log(boxA);
+
+            const boxes = document.getElementsByClassName('box');
+            console.log(boxes);
+            console.log(boxes[2]);
+
+
+            const boxACss = document.querySelector('#box-a-id'); //css 선택자
+            console.log(boxACss);
+
+            const boxesCss = document.querySelectorAll('.box');
+            console.log(boxesCss);
+
+
+            console.log(document.getElementsByClassName('c'));
+            console.log(document.getElementsByClassName('c')[0]);
+
+            const cBoxes = document.getElementsByClassName('c');
+            cBoxes[0];
+                            //document.querySelector('#target');
+            const p_target = document.getElementById('target');
+            console.log(p_target.textContent);
+            console.log(p_target.innerText);
+            console.log(p_target.innerHTML);
+
+            p_target.textContent = 'textContent로 접근해서 수정';
+            p_target.innerText = 'innerText로 접근해서 수정함';
+            p_target.innerHTML = 'innerHTML 로 <strong>접근해서</strong> 수정했음.';
+            // p_target.innerText = 'innerHTML 로 <strong>접근해서</strong> 수정했음.';
+
+
+
+        </script>
+    </body>
+</html>
