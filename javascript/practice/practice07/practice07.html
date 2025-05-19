@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+
+            position: relative;
+
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        .ani1:hover,
+        .ani2:hover,
+        .ani3:hover {
+            animation-play-state: paused;
+        }
+
+        .ani1 {
+            animation-name: animation1;
+        }
+
+        .ani2 {
+            animation-name: animation2;
+
+        }
+
+        .ani3 {
+            animation-name: animation3;
+        }
+
+        @keyframes animation1 {
+            0% {
+                background-color: blue;
+                left: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                left: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                left: 200px;
+            }
+        }
+
+        @keyframes animation2 {
+            0% {
+                background-color: blue;
+                top: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+            }
+        }
+
+        @keyframes animation3 {
+            0% {
+                background-color: blue;
+                top: 0px;
+                left: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px;
+                left: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+
+        /* .stop-box {
+            width: 100px;
+            height: 50px;
+            background-color: lightgray;
+        }
+
+        .stop-box:hover~.box {
+            animation-play-state: paused;
+        } */
+
+        .stopAnimation {
+            animation-play-state:paused;
+        }
+
+        .playAnimation {
+            animation-play-state:running;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="stop-box">멈추기</div> -->
+    <div>
+        <button onclick="playAni()">재생</button>
+        <button id="btn_stop">정지</button>
+    </div>
+    <div class="box ani1"></div>
+    <div class="box ani2"></div>
+    <div class="box ani3"></div>
+
+    <script>
+        const boxList = document.getElementsByClassName('box');
+
+        // document.getElementById('play').addEventListener('click',()=>{
+        //     for(let i=0; i<boxList.length;i++){
+        //     boxList[i].style.animationPlayState='running';
+        // }
+        // });
+        //재생버튼
+        function playAni(){
+            // document.querySelector('.ani1').style.animationPlayState='running';
+            // document.querySelector('.ani1').style.removeProperty('animation-play-state');
+            // document.querySelector('.ani2').style.animationPlayState='running';
+            // document.querySelector('.ani3').style.animationPlayState='running';
+
+            document.querySelector('.ani1').classList.remove('stopAnimation');
+            document.querySelector('.ani2').classList.remove('stopAnimation');
+            document.querySelector('.ani3').classList.remove('stopAnimation');
+        }
+
+        //정지버튼
+        document.getElementById('btn_stop').addEventListener('click',()=>{
+            for(let i=0; i<boxList.length;i++){
+                boxList[i].classList.add('stopAnimation');
+            }
+            // for(let i=0; i<boxList.length;i++){
+            //     boxList[i].style.animationPlayState='paused';
+            // }
+            // for(let box of boxes){
+            //     box.style.animationPlayState = 'paused';
+            // }    
+        });
+        
+    </script>
+</body>
+
+</html>
