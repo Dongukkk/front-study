@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formLogin" action="">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <!-- <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br> -->
+        <button id="btnLogin" type="submit">로그인 시도</button><br>
+    </form>
+
+    <script>
+        const loginId = document.getElementById('loginId');
+        const loginPw = document.getElementById('loginPw');
+        const btnLogin = document.getElementById('btnLogin');
+        const formLogin = document.getElementById('formLogin');
+
+        function tryLogin() {
+            loginId.value = "";
+            loginPw.value = "";
+        }
+
+        loginId.addEventListener('keydown', (event) => {
+            //if(event.keyCode == 13){    //deprecated
+            if (event.key == "Enter") {
+                event.preventDefault();
+                loginPw.focus();
+            }
+        });
+
+        loginPw.addEventListener('keydown', (event) => {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                btnLogin.click();
+                //tryLogin();
+                //btnLogin.focus();   //포커스이동+클릭
+            }
+        });
+
+        formLogin.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (loginId.value.trim() == '') {
+                alert('아이디를 입력해주세요');
+                loginId.focus();
+                return;
+            }
+            if (loginPw.value.trim() == '') {
+                alert('비밀번호를 입력해주세요');
+                loginPw.focus();
+                return;
+            }
+
+            
+            //formLogin.submit();
+            tryLogin();
+        });
+
+    </script>
+</body>
+
+</html>
